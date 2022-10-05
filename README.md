@@ -38,13 +38,18 @@ Video explanation how to use **Shape Stacker v3** [here](https://youtu.be/uJSre9
 
 ![2022-09-16_12 24 32](https://user-images.githubusercontent.com/103208695/190604922-2c19068c-713b-4136-a28e-356d0de594cf.png)
 
-4. Now additional options. **Mark Center Point** will mark center with red wool.  
+4. If your module needs shifting you can change this parameter.  
+![image](https://user-images.githubusercontent.com/103208695/194157309-193aba52-29eb-44ea-bb56-fb47aaceb7f8.png)
+
+![image](https://user-images.githubusercontent.com/103208695/194157096-a744340c-3d55-464f-abfd-ce40c807bac3.png)
+
+5. Now additional options. **Mark Center Point** will mark center with red wool.  
 ![2022-09-16_12 34 23](https://user-images.githubusercontent.com/103208695/190606930-a45f316f-7364-4feb-87a9-8918c0648a61.png)
 
-5. **Min Roof** will put just enough blocks so each spawning space has light level 0 (as we know each light level decreases spawning chances by 6.67%). Meanwhile **Extended roof** will put 41x41 roof around all spawning spaces to catch all possible packs.  
+6. **Min Roof** will put just enough blocks so each spawning space has light level 0 (as we know each light level decreases spawning chances by 6.67%). Meanwhile **Extended roof** will put 41x41 roof around all spawning spaces to catch all possible packs.  
 ![2022-09-16_12 38 25](https://user-images.githubusercontent.com/103208695/190607698-f7b95b83-a1bd-4064-a892-742d7fa2591d.png)
 
-6. **Set Desert** will set biome to desert 20 blocks out from all spawning spaces. If you need other biome you can use inbuilt SetBiome filter or edit Shape_Stacker_v4 code on line 70 and change biome ID to [needed biome](https://minecraft.fandom.com/wiki/Biome/IDs_before_1.13).
+7. **Set Desert** will set biome to desert 20 blocks out from all spawning spaces. If you need other biome you can use inbuilt SetBiome filter or edit Shape_Stacker_v4 code on line 70 and change biome ID to [needed biome](https://minecraft.fandom.com/wiki/Biome/IDs_before_1.13).
 
 ```py
 def setDesert(level, x0, z0):
@@ -71,7 +76,15 @@ def setDesert(level, x0, z0):
             chunk.root_tag["Level"]["Biomes"].value = array     
 ```
 
-7. Don't forget to remove orange wool after all those steps and watch [this](https://youtu.be/uJSre9uzo-E) video for more information.
+8. Don't forget to remove orange wool after all those steps and watch [this](https://youtu.be/uJSre9uzo-E) video for more information.
+
+## Change Log
+v4.1:
+- added shifting in X direction (may be bugged, leave an issue if encounter one)
+
+v4.0
+- sets biome
+- automatic roof building
 
 ## License
 This program is licensed under the MIT License. Please read the License file to know about the usage terms and conditions.
